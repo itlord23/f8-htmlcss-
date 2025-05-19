@@ -6,6 +6,12 @@
     --color-primary: #0F1B4C;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+    /* Cuộn đến các mục mượt mà hơn */
+}
+
 html {
     font-size: 62.5%;
 }
@@ -71,6 +77,8 @@ a {
 .hero-wrapped {
     /* Xử lý margin collapse */
     display: flex;
+    /* Xử lý căn giữa theo chiều dọc cho phần hero */
+    justify-content: center;
     flex-direction: column;
     background-color: #e6f0ff;
     height: calc(100vh - 90px);
@@ -121,15 +129,11 @@ a {
 }
 
 /* hero */
-.hero {
-    margin-top: 130px;
-}
-
-.hero .info {
+.hero-wrapped .info {
     width: 51%;
 }
 
-.hero .sub-title {
+.hero-wrapped .sub-title {
     font-weight: 500;
     font-size: 1.8rem;
     line-height: 1.5;
@@ -137,7 +141,7 @@ a {
     color: #687690;
 }
 
-.hero .title {
+.hero-wrapped .title {
     margin-top: 8px;
     font-weight: 700;
     font-size: 6.2rem;
@@ -145,7 +149,7 @@ a {
     line-height: 1.19;
 }
 
-.hero .desc {
+.hero-wrapped .desc {
     margin-top: 30px;
     font-weight: 400;
     font-size: 1.8rem;
